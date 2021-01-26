@@ -2,7 +2,7 @@
 # Rick and Mory App
 The task is to build a relatively simple app where we interact with some data. We're going to create an application where we see lists of character and episodes from the show Rick and Morty. We can add and remove items from both types into a favorite list. At the end we will extend the app to have multiple pages, reusable logic and global state.
 
- ## TO DO List for this little
+ ## TO DO List
 - Create a page for episodes and add it to App.vue  [lifecycle, methods]
 	-  Fetch items (for demo purposes we'll fetch and work with Rick and Morty episodes from: [rickandmortyapi](https://rickandmortyapi.com/documentation/#rest))
 	 - Select correct lifecycle
