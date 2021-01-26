@@ -1,14 +1,14 @@
 <template>
-  <Home />
+  <Episodes />
 </template>
 
 
 <script>
 import { defineComponent } from "vue";
-import Home from "./views/Home";
+import Episodes from "./views/Episodes";
 export default defineComponent({
   components: {
-    Home,
+    Episodes,
   },
 });
 </script>
@@ -33,5 +33,10 @@ export default defineComponent({
       color: #42b983;
     }
   }
+}
+ul,
+ol,
+li {
+  list-style: none;
 }
 </style>
