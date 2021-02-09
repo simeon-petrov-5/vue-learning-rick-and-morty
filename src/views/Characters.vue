@@ -1,33 +1,34 @@
 
 <template>
   <div v-loading="isLoading" class="page">
-    <h1>Rick and Moprty Episodes</h1>
+    <h1>Rick and Moprty Characters</h1>
     <ul class="customGrid">
-      <li v-for="episode in episodes" :key="episode.id">
-        <EpisodeComponent :episode="episode" />
+      <li v-for="character in characters" :key="character.id">
+      <CharacterComponent :character="character"/>
       </li>
     </ul>
   </div>
 </template>
 
 <script lang="ts">
-import Episode from "@/types/Episode";
+import Character from "@/types/Character";
 import { defineComponent } from "vue";
-import EpisodeComponent from "../components/EpisodeComponent.vue";
-import { getAllEpisodes } from "../dataProviders/dataProvider";
+import CharacterComponent from "../components/CharacterComponent.vue";
+import { getAllCharacters } from "../dataProviders/dataProvider";
 export default defineComponent({
   components: {
-    EpisodeComponent,
+    CharacterComponent
   },
   data() {
     return {
       isLoading: true,
-      episodes: [] as Episode[],
+      characters: [] as Character[],
     };
   },
   async created() {
-    const { results } = await getAllEpisodes();
-    this.episodes = results;
+    const { results } = await getAllCharacters();
+    console.log(results)
+    this.characters = results;
     this.isLoading = false;
   },
 });

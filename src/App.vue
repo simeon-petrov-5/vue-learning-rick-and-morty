@@ -1,14 +1,18 @@
 <template>
   <Episodes />
+  <Characters />
 </template>
 
 
 <script>
 import { defineComponent } from "vue";
 import Episodes from "./views/Episodes";
+import Characters from "./views/Characters";
+
 export default defineComponent({
   components: {
     Episodes,
+    Characters,
   },
 });
 </script>

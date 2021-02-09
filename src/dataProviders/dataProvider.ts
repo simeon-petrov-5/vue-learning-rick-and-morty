@@ -1,14 +1,27 @@
 import axios from 'axios';
 
+const API = 'https://rickandmortyapi.com/api'
+const emptyResp = {
+    info: null,
+    results: []
+}
+
 export async function getAllEpisodes() {
     try {
-        const { data } = await axios.get('https://rickandmortyapi.com/api/episode');
+        const { data } = await axios.get(`${API}/episode`);
         return data;
     } catch (e) {
         console.error(e);
-        return {
-            info: null,
-            results: []
-        }
+        return emptyResp;
+    }
+}
+
+export async function getAllCharacters() {
+    try {
+        const { data } = await axios.get(`${API}/character`);
+        return data;
+    } catch (e) {
+        console.error(e);
+        return emptyResp;
     }
 }
